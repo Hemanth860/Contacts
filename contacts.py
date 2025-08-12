@@ -16,10 +16,10 @@ def add_contact():
 def view_contact():
     print("\n---ALL CONTACTS---")
     if not contacts:
-    	print("Your contact list is empty")
+        print("Your contact list is empty")
     else:
-	for contact in contacts:
-		print(f"\n{contact})
+        for contact in contacts:
+            print(f"\n{contact}")
 		
     
 
@@ -27,15 +27,15 @@ def search_contact():
     search_name=input("\nEnter contact name:").lower()
     found_contacts=[]
     for contact in contacts:
-    	if search_name in contact['name'].lower():
-		found_contacts.append(contact)
+        if search_name in contact['name'].lower():
+            found_contacts.append(contact)
 
     print("\nSearch Results!!")
     if not found_contacts:
     	print("No contacts found with that name.")
     else:
     	for contact in found_contacts:
-    		print(contact)
+    	    print(contact)
 
 
 
