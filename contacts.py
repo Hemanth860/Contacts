@@ -1,7 +1,16 @@
 contacts=[]
 
 def add_contact():
-    pass
+    print("\nEnter new contact details:")
+    name=input("\nName:")
+    phone=input("\nPhone:")
+    email=input("\nEmail:")
+    
+    contact={'name':name,
+             'phone':phone,
+             'email':email}
+    contacts.append(contact)
+    print("Contact is added!!")
 
 def view_contact():
     pass
