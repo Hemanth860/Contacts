@@ -12,8 +12,15 @@ def add_contact():
     contacts.append(contact)
     print("Contact is added!!")
 
+
 def view_contact():
-    pass
+    print("\n---ALL CONTACTS---")
+    if not contacts:
+    	print("Your contact list is empty")
+    else:
+	for contact in contacts:
+		print(f"\n{contact})
+		
     
 
 def search_contact():
