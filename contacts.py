@@ -2,9 +2,9 @@ contacts=[]
 
 def add_contact():
     print("\nEnter new contact details:")
-    name=input("\nName:")
-    phone=input("\nPhone:")
-    email=input("\nEmail:")
+    name=input("Name:")
+    phone=input("Phone:")
+    email=input("Email:")
     
     contact={'name':name,
              'phone':phone,
@@ -14,9 +14,24 @@ def add_contact():
 
 def view_contact():
     pass
+    
 
 def search_contact():
-    pass
+    search_name=input("\nEnter contact name:").lower()
+    found_contacts=[]
+    for contact in contacts:
+    	if search_name in contact['name'].lower():
+		found_contacts.append(contact)
+
+    print("\nSearch Results!!")
+    if not found_contacts:
+    	print("No contacts found with that name.")
+    else:
+    	for contact in found_contacts:
+    		print(contact)
+
+
+
 
 print("--- WELCOME TO YOUR CONTACT BOOK ---")
 
